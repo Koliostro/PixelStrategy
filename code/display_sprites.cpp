@@ -1,5 +1,6 @@
 #include "display_tile.h"
 
+// Ammount pixels of sprite's side
 const int sizeOfSprite = 16;
 
 void selectSprite(SDL_Surface *SpriteSheet, SDL_Rect *posOnSpriteSheet,  int Xoffset, int Yoffset) {

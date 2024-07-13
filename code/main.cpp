@@ -1,13 +1,13 @@
 #include "tiles.h"
 #include "display_tile.h"
+#include "utilities.h"
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_events.h>
-#include <SDL2/SDL_image.h>
-#include <SDL2/SDL_render.h>
 #include <SDL2/SDL_video.h>
 #include <cstddef>
 
+// Size of window
 const Uint16 WIDTH = 600;
 const Uint16 HEIGHT = 600;
 
@@ -32,6 +32,9 @@ int main (int argc, char ** args) {
     SDL_Renderer *Render = NULL;
 
     Render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED); 
+
+    // Rects for displaty must be not pointers because if they are 
+    // pointers sprites don't display
 
     SDL_Rect posOnScreen;
     SDL_Rect posOnSpriteSheet;
